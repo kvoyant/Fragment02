@@ -2,6 +2,7 @@ package com.tjeit.fragment02;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
@@ -32,7 +33,19 @@ public class MainActivity extends BaseActivity {
 //                1. 지금 보여지고 있는 Fragment에 접근
 //                => 현재 작성중인 MainActivity 에서?
 
+                Fragment currentFrag = pagerAdapter.getItem(act.viewPager.getCurrentItem());
+
 //                2. 접근한 Fragment에게 어떻게 작업을 시킬건지 ?
+
+                if(act.viewPager.getCurrentItem() == 0) {
+//                    currentFrag가 FragmentOne 이다!
+                }
+                else if(act.viewPager.getCurrentItem() == 1) {
+//                    currentFrag가 FragmentTwo 이다!
+                }
+                else if(act.viewPager.getCurrentItem() == 2) {
+//                    currentFrag가 FragmentThree 이다!
+                }
 
             }
         });
