@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.tjeit.fragment02.adapters.PagerAdapter;
 import com.tjeit.fragment02.databinding.ActivityMainBinding;
+import com.tjeit.fragment02.fragments.FragmentOne;
 
 public class MainActivity extends BaseActivity {
     ActivityMainBinding act;
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
 
                 if(act.viewPager.getCurrentItem() == 0) {
 //                    currentFrag가 FragmentOne 이다!
+                    ((FragmentOne) currentFrag).changeTextMsg(act.testEdt.getText().toString());
                 }
                 else if(act.viewPager.getCurrentItem() == 1) {
 //                    currentFrag가 FragmentTwo 이다!
