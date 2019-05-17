@@ -10,6 +10,7 @@ import com.tjeit.fragment02.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
     ActivityMainBinding act;
+    PagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +113,7 @@ public class MainActivity extends BaseActivity {
 
         act.viewPager.setOffscreenPageLimit(4); // 프래그먼의 갯수와 맞춰주자 !
 
-        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
         act.viewPager.setAdapter(pagerAdapter);
     }
 
