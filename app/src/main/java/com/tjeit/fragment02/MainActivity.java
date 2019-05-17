@@ -25,15 +25,32 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        act.changeFragOneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.viewPager.setCurrentItem(0);
+            }
+        });
+
         act.changeFragTwoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fr = new FragmentTwo();
+//                Fragment fr = new FragmentTwo();
+//
+//                FragmentManager frManager = getSupportFragmentManager();
+//                FragmentTransaction frTransaction = frManager.beginTransaction();
+//                frTransaction.replace(R.id.fragOne, fr);
+//                frTransaction.commit();
 
-                FragmentManager frManager = getSupportFragmentManager();
-                FragmentTransaction frTransaction = frManager.beginTransaction();
-                frTransaction.replace(R.id.fragOne, fr);
-                frTransaction.commit();
+                act.viewPager.setCurrentItem(1);
+            }
+        });
+
+        act.changeFragThreeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.viewPager.setCurrentItem(2);
             }
         });
     }
