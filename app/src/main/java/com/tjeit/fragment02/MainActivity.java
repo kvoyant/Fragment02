@@ -1,10 +1,14 @@
 package com.tjeit.fragment02;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 
 import com.tjeit.fragment02.databinding.ActivityMainBinding;
+import com.tjeit.fragment02.fragments.FragmentTwo;
 
 public class MainActivity extends BaseActivity {
     ActivityMainBinding act;
@@ -20,7 +24,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+        act.changeFragTwoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr = new FragmentTwo();
 
+                FragmentManager frManager = getSupportFragmentManager();
+                FragmentTransaction frTransaction = frManager.beginTransaction();
+                frTransaction.replace(R.id.fragOne, fr);
+                frTransaction.commit();
+            }
+        });
     }
 
     @Override
