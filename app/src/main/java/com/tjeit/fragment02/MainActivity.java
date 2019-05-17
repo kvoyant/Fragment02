@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
+import com.tjeit.fragment02.adapters.PagerAdapter;
 import com.tjeit.fragment02.databinding.ActivityMainBinding;
 import com.tjeit.fragment02.fragments.FragmentTwo;
 
@@ -39,7 +40,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
+        act.viewPager.setAdapter(pagerAdapter);
     }
 
     @Override
