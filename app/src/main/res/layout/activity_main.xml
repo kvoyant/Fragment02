@@ -20,5 +20,10 @@
             android:layout_height="300dp"
             class="com.tjeit.fragment02.fragments.FragmentTwo"/>
 
+        <!-- 세번째 프래그먼트 생성. -->
+        <!-- 세로는 150dp -->
+        <!-- JAVA + 데이터바인딩으로 문구 표현 -->
+
+
     </LinearLayout>
 </layout>

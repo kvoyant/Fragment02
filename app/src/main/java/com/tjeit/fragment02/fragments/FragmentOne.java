@@ -28,5 +28,7 @@ public class FragmentOne extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        binding.myTextView.setText("데이터 바인딩 이용");
     }
 }
