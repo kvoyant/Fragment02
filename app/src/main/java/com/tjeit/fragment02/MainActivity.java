@@ -2,14 +2,10 @@ package com.tjeit.fragment02;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.tjeit.fragment02.adapters.PagerAdapter;
 import com.tjeit.fragment02.databinding.ActivityMainBinding;
-import com.tjeit.fragment02.fragments.FragmentTwo;
 
 public class MainActivity extends BaseActivity {
     ActivityMainBinding act;
@@ -30,6 +26,10 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 act.viewPager.setCurrentItem(0);
+
+                act.changeFragOneBtn.setText("현재 선택됨");
+                act.changeFragTwoBtn.setText("2번 프래그먼트");
+                act.changeFragThreeBtn.setText("3번 프래그먼트");
             }
         });
 
@@ -44,6 +44,10 @@ public class MainActivity extends BaseActivity {
 //                frTransaction.commit();
 
                 act.viewPager.setCurrentItem(1);
+
+                act.changeFragOneBtn.setText("1번 프래그먼트");
+                act.changeFragTwoBtn.setText("현재 선택됨");
+                act.changeFragThreeBtn.setText("3번 프래그먼트");
             }
         });
 
@@ -51,6 +55,10 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 act.viewPager.setCurrentItem(2);
+
+                act.changeFragOneBtn.setText("1번 프래그먼트");
+                act.changeFragTwoBtn.setText("2번 프래그먼트");
+                act.changeFragThreeBtn.setText("현재 선택됨");
             }
         });
     }
